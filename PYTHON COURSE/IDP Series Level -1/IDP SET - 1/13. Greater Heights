@@ -1,0 +1,94 @@
+Question: 
+Arun is in a class with N students. He has been assigned the responsibility of measuring the 
+height of each student in the class.
+
+After completing the above-mentioned task, the teacher asked him the Q  queries. In each query, he will be given a number X
+and his task is to find the number of students in the class who have a height of at least X.
+Help Arun by answering his teacher's queries.
+
+Write a program that reads N  students' heights and Q queries asked by the teacher and prints the answers to each query.
+
+Input:
+The first line of input contains space-separated integers representing number of students N and number of queries Q.
+The second line of input contains N  space-separated integers representing the heights of N students in the class.
+The next Q lines of input contain an integer value representing each query X asked by the teacher. 
+
+Output:
+The output should be Q lines containing an integer obtained by calculating the number of students in the class 
+who have a height of at least X on each line.
+
+Explanation:
+
+TestCase: If the given N=3, Q=1 and heights = 100 160 130
+In this example we have 3 students in the class and 1 query has been asked by the teacher
+For the given query 120, the number of students that have a height of at least 120 are 2.
+
+The output should be 2
+
+Sample Input 1:
+5 5
+804289384 846930887 681692778 714636916 957747794
+424238336
+719885387
+649760493
+596516650
+189641422
+Sample Output 1:
+5
+3
+5
+5
+5
+
+Sample Input 2:
+6
+Sample Output 2:
+1 0 1 0 1 0 
+0 1 0 1 0 1 
+1 0 1 0 1 0 
+0 1 0 1 0 1 
+1 0 1 0 1 0 
+0 1 0 1 0 1
+
+Solution:
+
+def get_students_list(no_of_students):
+    students_heights_list = list(map(int, input().split()))
+    return students_heights_list
+def get_queries_list(no_of_queries):
+    queries_list = []
+    for i in range(no_of_queries):
+        query = int(input())
+        queries_list.append(query)
+    return queries_list
+def get_answer_to_the_query(students_heights_list, query):
+    answer = 0
+    for each_height in students_heights_list:
+        if(each_height >= query):
+            answer += 1
+    return answer
+def answer_the_queries(students_heights_list, queries_list):
+    for each_query in queries_list:
+        answer = get_answer_to_the_query(students_heights_list, each_query)
+        print(answer)
+def main():
+    no_of_students, no_of_queries = map(int, input().split())
+    students_heights_list = get_students_list(no_of_students)
+    queries_list = get_queries_list(no_of_queries)
+    answer_the_queries(students_heights_list, queries_list)
+
+main()
+
+___________________________________________________________________
+Another Method For a Solution
+___________________________________________________________________
+
+n,q=list(map(int,input().split()))
+listn=list(map(int,input().split()))
+for i in range(q):
+    count=0
+    a=int(input())
+    for j in listn:
+        if j>=a:
+            count+=1 
+    print(count)

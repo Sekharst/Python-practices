@@ -1,0 +1,859 @@
+01. Return the Given Argument
+
+For this problem, the prefilled code will contain a function. Write a program to return the value passed to the function.
+
+Input:
+The first line of input will contain an integer.
+
+Ouput:
+The output should be a single line containing the value returned by the function.
+
+Explanation:
+
+For example, if the given integer is 20, the output should be 20, as the function returns the same value.
+
+Tutorial: Return the Given Argument
+
+Outline
+
+Question: Return the Given Argument
+Approach
+Step 1: Define the Function
+Step 2: Read the Input
+Step 3: Call the Function and Print the Result
+
+Question: Return the Given Argument
+In this problem, you are given a function. Your task is to write a program that returns the value passed to the function.
+
+Input:
+
+The first line of input will contain an integer.
+
+Output:
+
+The output should be a single line containing the value returned by the function.
+
+Example:
+
+For example, if the given integer is 20, the output should be 20, as the function returns the same value.
+
+Approach
+
+To solve this problem, we will follow these steps:
+Define the function that takes an argument and returns the same value.
+Read the input value (an integer) from the user.
+Call the function with the input value and print the result.
+
+Step-by-Step Explanation
+
+Step 1: Define the Function
+First, let's define the function func that takes one argument arg_1 and returns the same value.
+
+Step 2: Read the Input
+Now, we need to read the input value representing the integer. We can use the input() function to read the input and int() to convert it into an integer.
+
+Step 3: Call the Function and Print the Result
+Finally, we will call the function func with the input value n and store the result in a variable called result. Then, we will print the result.
+
+Sample Input 1:
+
+20
+
+Sample Output 1:
+
+20
+
+Sample Input 2:
+
+5
+
+Sample Output 2:
+
+5
+
+Solution:
+
+def func(arg_1):
+    return arg_1
+
+n = int(input())
+result = func(n)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+02. Perimeter of Square
+
+For this problem, the prefilled code will contain a function. Write a program that the given function will return the perimeter of the square.
+The sum of lengths of the four sides of a square is the perimeter of the square.
+
+Input:
+The first line of input will contain a positive integer.
+
+Ouput:
+The output should be a single line containing the perimeter of the square.
+
+Explanation:
+
+For example, if the given number is 3, since the square has the same length of sides, the perimeter of the square is the sum of the four sides' 
+length. So the output should be 12.
+
+Tutorial: Perimeter of Square
+
+In this tutorial, we will learn how to write a simple Python program to calculate the perimeter of a square. Let's break down the solution
+into smaller steps and explain each step.
+
+Step 1: Understand the problem
+We have the length of one side of a square, and our task is to calculate the perimeter of the square. A square has four equal sides, so we 
+need to multiply the length of one side by 4 to find the perimeter.
+
+Step 2: Write the function
+We will start by writing a function called perimeter_of_square. This function will take one input, the length of one side of the square, 
+and return the perimeter of the square.
+
+Step 3: Calculate the perimeter
+Next, we need to calculate the perimeter of the square by multiplying the length of one side by 4.
+
+Step 4: Return the perimeter
+Now, we will return the calculated perimeter from the function.
+Our perimeter_of_square function is now complete. It should look like this:
+
+Step 5: Get the input and call the function
+Now, we need to get the input from the user and call our perimeter_of_square function with that input. We will use the input() function 
+to get the user's input and convert it to an integer using the int() function.
+
+After getting the input, we will call the `perimeter_of_square function with the input and store the result in a variable called result.
+
+Step 6: Print the result
+Finally, we will print the result, which is the perimeter of the square.
+
+Sample Input 1:
+
+3
+
+Sample Output 1:
+
+12
+
+Sample Input 2:
+
+5
+
+Sample Output 2:
+
+20
+
+Solution:
+
+def perimeter_of_square(arg_1):
+    perimeter = arg_1 * 4
+    return perimeter
+    
+side = int(input())
+result = perimeter_of_square(side)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+03. Second Character in the Word
+
+For this problem, the prefilled code will contain a function. Write a program that the given function will return the second character 
+in the word passed to the function.
+
+Input:
+The first line of input will contain a string.
+
+Ouput:
+The output should be a single line containing the second character of the given word.
+
+Explanation:
+
+For example, if the given word is "MATHS", your code should print the second character in the given word, which is "A".
+
+Tutorial: Second Character in the Word
+
+Outline
+
+Question: Second Character in the Word
+Approach
+Step 1: Define the Function
+Step 2: Read the Input
+Step 3: Call the Function and Print the Result
+
+Question: Second Character in the Word
+In this problem, you need to write a program that returns the second character in the given word. The input will be a single string, and
+the output should be a single line containing the second character of the given word.
+
+For example, if the given word is "MATHS", your code should print the second character in the given word, which is "A".
+
+Approach
+
+To solve this problem, we will follow these steps:
+Define a function that takes a string as an argument and returns the second character of the string.
+Read the input string.
+Call the function with the input string and print the result.
+
+Step-by-Step Explanation
+
+Step 1: Define the Function
+First, let's define a function called second_character that takes a single argument, arg_1. Inside the function, we will find the second 
+character of the string by using the index 1 and store it in a variable called character. Finally, we will return the character variable.
+
+Step 2: Read the Input
+Now, we need to read the input string. We can use the input() function to read the input and store it in a variable called word.
+
+Step 3: Call the Function and Print the Result
+Next, we will call the second_character function with the word variable as an argument. The function will return the second 
+character of the word, which we will store in a variable called result. Finally, we will print the result variable.
+
+Sample Input 1:
+
+MATHS
+
+Sample Output 1:
+
+A
+
+Sample Input 2:
+
+Google
+
+Sample Output 2:
+
+o
+
+Solution:
+
+def second_character(arg_1):
+    character = arg_1[1]
+    return character
+    
+word=input()
+result = second_character(word)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+04. Percentage - 4
+
+A function is given in prefilled code that takes a Number N as an argument.
+Write a program that checks if N is less than 1000
+Return 5% of the N if N is less than 1000, Otherwise return  10% of the N.
+
+Input:
+The input will be a single line containing an integer representing N.
+
+Ouput:
+The output should be a single line containing the float returned by the function. 5% of the N should be printed if N is less than 1000,Otherwise 10% of N
+should be printed.
+
+Explanation:
+
+For example, if the given number is N=500
+• The given number 500 is less than 1000. (500 < 1000)
+• 5% of 500 is 25.0 (5 / 100) * 500 = 25.0
+
+The Output should be 25.0
+
+Tutorial: Percentage - 4
+
+Outline
+
+Question: Percentage - 4
+Approach
+Step 1: Define the function
+Step 2: Check if the number is less than 1000
+Step 3: Calculate the percentage
+Step 4: Read the input and call the function
+
+Question: Percentage - 4
+A function is given in prefilled code that takes a number N as an argument. Write a program that checks if N is less than 1000. 
+Return 5% of the N if N is less than 1000. Otherwise, return 10% of the N.
+
+The input will be a single line containing an integer representing N. The output should be a single line containing the float returned by 
+the function. 5% of the N should be printed if N is less than 1000. Otherwise, 10% of N should be printed.
+
+Approach
+
+Define a function that takes a number as an argument.
+Check if the number is less than 1000.
+Calculate the percentage based on the condition.
+Read the input and call the function.
+
+Step-by-Step Explanation
+
+Step 1: Define the function
+Define a function called calculate_percentage that takes a single argument, number.
+
+Step 2: Check if the number is less than 1000
+Inside the function, use an if statement to check if the number is less than 1000.
+
+Step 3: Calculate the percentage
+If the number is less than 1000, calculate 5% of the number. Otherwise, calculate 10% of the number. Store the result in a variable called value.
+Return the value from the function.
+
+Step 4: Read the input and call the function
+Read the input value representing the number N. We can use the input() function to read the input and int() to convert it into an integer.
+Call the calculate_percentage function with the number as an argument and store the result in a variable called result.
+Print the result.
+
+Sample Input 1:
+
+500
+
+Sample Output 1:
+
+25.0
+
+Sample Input 2:
+
+2000
+
+Sample Output 2:
+
+200.0
+
+Solution:
+
+def calculate_percentage(number):
+    if number < 1000:
+        value = ((5 / 100) * number)
+    else:
+        value = ((10 / 100) * number)
+        
+    return value
+    
+number = int(input())
+result = calculate_percentage(number)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+05. Valid String - 2
+
+A function is given in prefilled code that takes a String S as an argument.
+Write a program that checks if the given string S is valid.
+Return Valid String if the first character of S is a digit or the number of characters present in S is greater than or equal to 6. Otherwise, return Invalid String.
+
+Input:
+The input will be a single line containing a string representing S.
+
+Output:
+The output should be a single line containing a string. Valid String should be printed if the length of S is greater than or equal to 6 or 
+the first character of S is a digit. Otherwise, Invalid String should be printed.
+
+Explanation:
+
+For example, if the given string is S = "terminal"
+✓ The length of S is greater than 6. (Length of S is 8, 8> 6 ) 8>6)
+X The first character is a digit. (The first character is the alphabet t)
+The output should be Valid String, as the length of S is greater than 6.
+
+For example, if the given string is S = "test"
+X The length of S is greater than 6. (Length of S is 4, 4<6)
+X The first character is a digit. (The first character is the alphabet t).
+The output should be Invalid String.
+
+Tutorial: Valid String - 2
+
+Outline
+
+Question: Valid String - 2
+Approach
+Step 1: Check the length of the string
+Step 2: Check if the first character is a digit
+Step 3: Determine if the string is valid or invalid
+Step 4: Read the input and call the function
+
+Question: Valid String - 2
+You are given a string S. Your task is to check if the given string S is valid. A string is considered valid if the first character of
+S is a digit or the number of characters present in S is greater than or equal to 6. If the string is valid, return "Valid String". 
+Otherwise, return "Invalid String".
+
+Approach
+
+To solve this problem, we will follow these steps:
+Check the length of the string.
+Check if the first character of the string is a digit.
+Determine if the string is valid or invalid based on the conditions.
+Read the input and call the function to check the validity of the string.
+
+Step-by-Step Explanation
+
+Step 1: Check the length of the string
+First, we need to check if the length of the string is greater than or equal to 6. We can use the len() function to find the length of the string.
+
+Step 2: Check if the first character is a digit
+Next, we need to check if the first character of the string is a digit. We can use the isdigit() function to check if a character is a digit.
+
+Step 3: Determine if the string is valid or invalid
+Now, we will determine if the string is valid or invalid based on the conditions. If either the length of the string is greater than 
+or equal to 6 or the first character is a digit, the string is valid. Otherwise, the string is invalid.
+
+Step 4: Read the input and call the function
+Finally, we will read the input string using the input() function and call the valid_string() function to check the validity of the string. 
+Then, we will print the result.
+
+Sample Input 1:
+
+terminal
+
+Sample Output 1:
+
+Valid String
+
+Sample Input 2:
+
+test
+
+Sample Output 2:
+
+Invalid String
+
+Sample Input 3:
+
+5code
+
+Sample Output 3:
+
+Valid String
+
+Solution:
+
+def valid_string(string):
+    valid_length = len(string) >= 6
+    is_first_character_digit = string[0].isdigit()
+    
+    if valid_length or is_first_character_digit:
+        statement = "Valid String"
+    else:
+        statement = "Invalid String"
+        
+    return statement
+    
+string = input()
+result = valid_string(string)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+06. Speed Meter
+
+Write a function with the name get_speed_status that takes the speed (S) as an argument.
+ - If the speed is less than 60, it should return "Normal".
+ - If the speed is greater than or equal to 60 and less than 80, it should return "Warning".
+ - If the speed is greater than or equal to 80, it should return "Over Speed".
+
+Input:
+The input will be a single line containing a positive integer (S).
+
+Output:
+The output should be a single line containing the message according to the above conditions.
+
+Explanation:
+
+For example, if the given speed is 75, the output should be "Warning", as 75 is greater than 60 and less than 80.
+
+For example, if the given speed is 50, the output should be "Normal", as 50 is less than 60.
+
+Tutorial: Speed Meter
+
+Outline
+
+Question: Speed Meter
+Approach
+Step 1: Define the Function
+Step 2: Check the Speed Conditions
+Step 3: Read Input and Call the Function
+Solution
+
+Question: Speed Meter
+In this coding question, you need to write a function called get_speed_status that takes a speed value as an argument. The function 
+should return a message based on the following conditions:
+
+If the speed is less than 60, it should return "Normal".
+If the speed is greater than or equal to 60 and less than 80, it should return "Warning".
+If the speed is greater than or equal to 80, it should return "Over Speed".
+The input will be a single line containing a positive integer (S), representing the speed. The output should be a single 
+line containing the message according to the above conditions.
+
+Approach
+
+To solve this problem, we will follow these steps:
+Define a function called get_speed_status that takes a speed value as an argument.
+Check the speed conditions and return the appropriate message.
+Read the input speed value, call the function, and print the result.
+
+Step-by-Step Explanation
+Step 1: Define the Function
+First, let's define a function called get_speed_status that takes a speed value as an argument.
+
+Step 2: Check the Speed Conditions
+Inside the function, we will check the speed conditions and return the appropriate message.
+
+Here, we use an if statement to check if the speed is less than 60. If it is, we set the message to "Normal". If the speed is not
+less than 60, we use an elif statement to check if the speed is greater than or equal to 60 and less than 80. If it is,
+we set the message to "Warning". If none of the previous conditions are met, we set the message to "Over Speed" using the 
+else statement. Finally, we return the message.
+
+Step 3: Read Input and Call the Function
+Now, we need to read the input speed value, call the get_speed_status function, and print the result.
+
+Here, we use the input() function to read the input and int() to convert it into an integer. Then, we call the get_speed_status 
+function with the input speed value and store the result in a variable called result. Finally, we print the result.
+
+Sample Input 1:
+
+75
+
+Sample Output 1:
+
+Warning
+
+Sample Input 2:
+
+50
+
+Sample Output 2:
+
+Normal
+
+Solution:
+
+def get_speed_status(speed):
+    if speed < 60:
+        msg = "Normal"
+    elif (speed >= 60) and (speed < 80):
+        msg = "Warning"
+    else:
+        msg = "Over Speed"
+    return msg
+
+speed = int(input())
+result = get_speed_status(speed)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+07. Weather Reporter
+
+Write a function with the name get_weather_report that takes the temperature as an argument.
+ - If the temperature is less than 22, it should return "Cold".
+ - If the temperature is greater than or equal to 22 and less than 35, it should return "Warm".
+ - If the temperature is greater than or equal to 35, it should return "Hot".
+
+Input:
+The input will be a single line containing an integer.
+
+Output:
+The output should be a single line containing the weather report according to the above conditions.
+
+Explanation:
+
+For example, if the given temperature is 37, the output should be "Hot", as it is greater than 35.
+
+Tutorial: Weather Reporter
+
+Outline
+
+Question: Weather Reporter
+Approach
+Step 1: Define the function
+Step 2: Check the temperature conditions
+Step 3: Get the input and print the result
+
+Question: Weather Reporter
+Write a function with the name get_weather_report that takes the temperature as an argument.
+- If the temperature is less than 22, it should return "Cold".
+- If the temperature is greater than or equal to 22 and less than 35, it should return "Warm".
+- If the temperature is greater than or equal to 35, it should return "Hot".
+
+The input will be a single line containing an integer. The output should be a single line containing the weather report according to the above conditions.
+
+For example, if the given temperature is 37, the output should be "Hot", as it is greater than 35.
+
+Approach
+
+To solve this problem, we will follow these steps:
+1. Define a function named get_weather_report that takes the temperature as an argument.
+2. Check the temperature conditions and return the corresponding weather report.
+3. Get the input temperature and print the result.
+
+Step-by-Step Explanation
+
+Step 1: Define the function
+First, we need to define a function named get_weather_report that takes the temperature as an argument.
+
+Step 2: Check the temperature conditions
+Inside the function, we will check the temperature conditions and return the corresponding weather report.
+
+If the temperature is less than 22, return "Cold".
+If the temperature is greater than or equal to 22 and less than 35, return "Warm".
+If the temperature is greater than or equal to 35, return "Hot".
+
+Step 3: Get the input and print the result
+Now, we need to get the input temperature, call the get_weather_report function with the input temperature, and print the result.
+
+Read the input temperature using the input() function and convert it to an integer using the int() function.
+Call the get_weather_report function with the input temperature and store the result in a variable named result.
+Print the result.
+
+Sample Input 1:
+
+37
+
+Sample Output 1:
+
+Hot
+
+Sample Input 2:
+
+18
+
+Sample Output 2:
+
+Cold
+
+Solution:
+
+def get_weather_report(temperature):
+    if temperature < 22:
+        report = "Cold"
+    elif (temperature >= 22) and (temperature < 35):
+        report = "Warm"
+    else:
+        report = "Hot"
+    return report
+
+temperature = int(input())
+result = get_weather_report(temperature)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+08. Count the Vowels
+
+Write a function with the name count_the_vowels that takes a word as an argument and count the number of vowels in the given word.
+The letters (a, e, i, o, u) are considered as vowels.
+
+Input:
+The input will be a single line containing a string.
+Note: The input word will contain only lowercase letters.
+
+Output:
+The output should be a single line containing the count of vowels in the given word.
+
+Explanation:
+
+For example, if the given word is "suggestions", the vowels in the given word are (u, e, i, o). So the output should be 4.
+
+Tutorial: Count the Vowels
+
+Outline
+
+Question: Count the Vowels
+Approach
+Step 1: Define the function
+Step 2: Initialize the count variable
+Step 3: Loop through the word
+Step 4: Check if the letter is a vowel
+Step 5: Increment the count
+Step 6: Return the count
+Step 7: Read the input and call the function
+
+Question: Count the Vowels
+Write a function with the name count_the_vowels that takes a word as an argument and count the number of vowels in the given word. 
+The letters (a, e, i, o, u) are considered as vowels.
+
+Input:
+The input will be a single line containing a string. Note: The input word will contain only lowercase letters.
+
+Output:
+The output should be a single line containing the count of vowels in the given word.
+
+Explanation:
+For example, if the given word is "suggestions", the vowels in the given word are (u, e, i, o). So the output should be 4.
+
+Approach
+
+To solve this problem, we will follow these steps:
+Define a function named count_the_vowels that takes a word as an argument.
+Initialize a variable count to store the number of vowels.
+Loop through each letter in the word.
+Check if the letter is a vowel (a, e, i, o, u).
+If the letter is a vowel, increment the count.
+Return the count of vowels.
+Read the input word, call the function, and print the result.
+
+Step-by-Step Explanation
+
+Step 1: Define the function
+First, let's define a function named count_the_vowels that takes a word as an argument.
+
+Step 2: Initialize the count variable
+Inside the function, initialize a variable count to store the number of vowels. Set its initial value to 0.
+
+Step 3: Loop through the word
+Now, we need to loop through each letter in the word. We can use a for loop for this.
+
+Step 4: Check if the letter is a vowel
+Inside the loop, we need to check if the letter is a vowel (a, e, i, o, u). We can use multiple conditions with or 
+operator to check if the letter is any of the vowels.
+
+Step 5: Increment the count
+If the letter is a vowel, increment the count variable by 1.
+
+Step 6: Return the count
+After the loop is finished, return the count of vowels from the function.
+
+Step 7: Read the input and call the function
+Finally, read the input word using the input() function, call the count_the_vowels function with the input word, and print the result.
+
+Sample Input 1:
+
+suggestions
+
+Sample Output 1:
+
+4
+
+Sample Input 2:
+
+correctness
+
+Sample Output 2:
+
+3
+
+Solution:
+
+def count_the_vowels(word):
+    count = 0
+    for letter in word:
+        is_a = letter == 'a'
+        is_e = letter == 'e'
+        is_i = letter == 'i'
+        is_o = letter == 'o'
+        is_u = letter == 'u'
+        is_vowel = ((((is_a or is_e) or is_i) or is_o) or is_u)
+        if is_vowel:
+            count += 1
+    return count
+
+word = input()
+result = count_the_vowels(word)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+
+09. Count the Uppercase Letters
+
+A function is given in prefilled code that takes a string S as an argument.
+Write a program that prints the count of uppercase letters in the given string S.
+
+Input:
+The input will be a single line containing a string representing S.
+
+Output:
+The output should be a single line containing an integer that is the count of uppercase letters in the given string S.
+
+Explanation:
+
+For example, if the given string is S = "explore"
+• The letters in the given string "expLoRe" are e, X, p, L, o, R, and e.
+• The uppercase letters in the string "expLoRe" are X, L, and R.
+• The count of uppercase letters in the given string is 3.
+The output should be 3
+
+Tutorial: Count the Uppercase Letters
+
+Outline
+
+Question: Count the Upper Case Letters
+Approach
+Step 1: Define the function
+Step 2: Initialize the count variable
+Step 3: Loop through the string
+Step 4: Check if the letter is uppercase
+Step 5: Increment the count
+Step 6: Return the count
+Step 7: Read the input and call the function
+Step 8: Print the result
+
+Question: Count the Upper Case Letters
+In this coding question, you are given a string S. Your task is to write a program that prints the count of uppercase letters in the given string S.
+
+Approach
+
+To solve this problem, we will follow these steps:
+Define a function that takes a string as an argument.
+Initialize a count variable to store the number of uppercase letters.
+Loop through each letter in the string.
+Check if the letter is uppercase.
+If the letter is uppercase, increment the count.
+Return the count of uppercase letters.
+Read the input string and call the function.
+Print the result.
+
+Step-by-Step Explanation
+
+Step 1: Define the function
+First, let's define a function called count_of_uppercase that takes a string word as an argument.
+
+Step 2: Initialize the count variable
+Inside the function, create a variable called count and set its value to 0. We will use this variable to store the number of uppercase letters in the string.
+
+Step 3: Loop through the string
+Now, we need to loop through each letter in the string word. We can use a for loop for this purpose.
+
+Step 4: Check if the letter is uppercase
+Inside the loop, we will check if the current letter each_letter is an uppercase letter. We can use the isupper() method to do this.
+
+Step 5: Increment the count
+If the current letter is an uppercase letter, we will increment the count variable by 1.
+
+Step 6: Return the count
+After the loop is finished, we will return the count variable, which contains the number of uppercase letters in the string.
+
+Step 7: Read the input and call the function
+Now, let's read the input string using the input() function and store it in a variable called word. Then, call the count_of_uppercase function 
+with the input string as an argument and store the result in a variable called result.
+
+Step 8: Print the result
+Finally, print the result, which is the count of uppercase letters in the given string.
+
+Sample Input 1:
+
+eXpLoRe
+
+Sample Output 1:
+
+3
+
+Sample Input 2:
+
+Visits
+
+Sample Output 2:
+
+1
+
+Solution:
+
+def count_of_uppercase(word):
+    count = 0
+    
+    for each_letter in word:
+        is_upper_letter = each_letter.isupper()
+        
+        if is_upper_letter:
+            count += 1
+    
+    return count
+
+word = input()
+result = count_of_uppercase(word)
+print(result)
+
+____________________________________________________________________________________________________________________________________________________________
+

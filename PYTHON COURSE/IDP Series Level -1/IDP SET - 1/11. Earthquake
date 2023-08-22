@@ -1,0 +1,53 @@
+Question: 
+Shreya has been given two different earthquake magnitudes A and B  and her task is to find how many times earthquake 
+A  is more powerful than earthquake B
+
+She knows that when the magnitude of an earthquake increases by 1, the amount of energy multiplies by 32. 
+Help Shreya in determining the intensity of earthquake A compared to earthquake B 
+
+Write a program that reads the magnitudes of earthquakes A and B  and prints the number of times earthquake A
+ is more powerful than earthquake B
+
+Input:
+The input will be a single line containing space-separated integers representing the magnitudes of the earthquakes A and B
+
+Output:
+The output should be a single line containing an integer obtained by calculating the number of times earthquake A
+ is more powerful than earthquake B
+
+Explanation:
+
+TestCase: If the given A=6 and B=4
+The difference between 6 and 4 is 2, Since, the magnitude of an earthquake increases by 2,
+the amount of energy multiplies by 32x32
+
+32x32=1024
+
+earthquake A is 1024  times more powerful than the earthquake B
+
+The Otput should be 1024
+
+Sample Input 1:
+6 4
+Sample Output 1:
+1024
+
+Sample Input 2:
+5 5
+Sample Output 2:
+1
+
+Solution:
+
+def get_the_amount_of_energy(magnitude_a, magnitude_b):
+    magnitudes_difference = magnitude_a - magnitude_b
+    amount_of_energy = 32 ** magnitudes_difference
+    return amount_of_energy
+
+def main():
+    magnitude_a, magnitude_b = input().split()
+    magnitude_a, magnitude_b = int(magnitude_a), int(magnitude_b)
+    amount_of_energy = get_the_amount_of_energy(magnitude_a, magnitude_b)
+    print(amount_of_energy)
+
+main()

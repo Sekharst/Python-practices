@@ -1,0 +1,465 @@
+01. Rectangle 3 (For Loop)
+
+Write a program that reads two numbers M and N, and prints a Rectangle of M rows and N columns using numbers
+from 1 as  shown in sample output
+
+1 1 1 1
+2 2 2 2
+3 3 3 3
+
+﻿Note:
+
+• There is a space after every number.
+
+Input:
+
+The first line of input contains an integer representing M. 
+The second line of input contains an integer representing N.
+
+Output:
+
+The output should be M rows and N columns containing numbers strating from 1 as a Rectangle shown in the sample output.
+
+Explanation:
+
+For example, if the given numbers are M = 5 and N = 4,
+• Print the numbers on 5 rows and 4 columns as shown in the given image.
+
+https://res.cloudinary.com/deujvj7up/image/upload/v1671786870/Screenshot_from_2022-12-23_14-42-59_ujeews.png
+
+Note:
+
+In the given image,
+• There is a space after every number.
+
+The output should be,
+
+1 1 1 1
+2 2 2 2
+3 3 3 3
+4 4 4 4
+5 5 5 5
+
+Sample Input 1:
+
+5
+4
+
+Sample Output 1:
+
+1 1 1 1 
+2 2 2 2 
+3 3 3 3 
+4 4 4 4 
+5 5 5 5 
+
+Sample Input 2:
+
+2
+3
+
+Sample Output 2:
+
+1 1 1 
+2 2 2 
+
+Solution:
+
+m=int(input())
+n=int(input())
+"""
+for i in range(m):
+    print((str(i+1)+' ')*n)
+ """ 
+count=1 
+while count<=m:
+    print((str(count)+" ")*n)
+    count+=1
+    
+__________________________________________________________________________________________
+
+02﻿ Print from 0 to N
+
+write a program that reads a number N and prin N numbers statring from 0
+
+Input:
+
+The input will be a single line containing an integer representing N.
+
+Output:
+
+The output should be N lineswith each line containing an integer that is one of the N numbers starting from 0
+
+﻿Explanation
+
+For example, if the given number is N = 2,
+
+• The 2 numbers from 0  are 0 and 1.
+
+The output should be,
+
+0
+1
+
+Sample Input 1:
+
+2
+
+Sample Output 1:
+
+0
+1
+
+Sample Input 2:
+
+5
+
+Sample Output 2:
+
+0
+1
+2
+3
+4
+
+Solution:
+
+n=int(input())
+"""
+for i in range(0,n):
+    print(i)
+"""
+count=0
+while count<n:
+    print(count)
+    count+=1    
+    
+_________________________________________________________________________________________
+
+03.Average of N Inputs
+
+Given a number N, write a program that reads N inputs and prints the average of the N inputs.
+
+﻿Input:
+
+The first line of input contains an integer representing N.
+the next N lines of input contain integers
+
+﻿Output:
+
+The output should be a single line containing a float that is the average of the N inputs.
+
+Explanation:
+
+For example, if the given number is N = 5,
+The 4 inputs are 3, 6, 2, 8 and 1.
+• The sum of 3, 6, 2, 8 and 1 is 20. ( 3+ 6 + 2 + 8 + 1 = 20)
+• The average of 5 inputs is 4.0. ( 20/5 = 4.0 )
+
+The output should be 5.0.
+
+Sample Input 1:
+
+5
+3
+6
+2
+8
+1
+
+Sample Output 1:
+
+4.0
+
+Sample Input 2:
+
+2
+2
+3
+
+Sample Output 2:
+
+2.5
+                  
+Solution:
+
+n=int(input())
+sum=0
+"""
+for i in range(n):
+    m=int(input())
+    sum+=m
+"""
+count=1
+while count<=n:
+    m=int(input())
+    sum+=m 
+    count+=1
+print(sum/n)
+
+
+____________________________________________________________________________________________________
+
+04. Right Angled Traingle - 4
+
+Write a program that reads a number N and prints two Right Angled Traingles of N rows using stars (*).
+
+*
+* *
+* * *
+*
+* *
+* * *
+
+Note:
+
+There is space after every star (*)
+
+﻿Input
+
+The input will be a single line containing an integer representing N.
+
+Output
+
+The output should be 2 * N rows containing stars (*) as two Right Angled Traingles shown in the sample output.
+
+Explanation:
+
+For example, if the given number is N = 4,
+• Print the stars (*) on 8 rows as shown in the given image.
+• The first 4 rows should have a Right Angled Triangle
+• The ext rows should have another Right Angled Triangle
+
+https://assets.ccbp.in/frontend/content/programming-foundations/cx-right-angled-triangle-4.jpg
+
+Note:
+
+In the given image,
+• The Star in box indicates the star and a space ("*").
+
+The output should be,
+
+*
+* *
+* * *
+* * * *
+*
+* *
+* * *
+* * * *
+
+Sample Input 1:
+
+4
+
+Sample Output 1:
+
+*
+* *
+* * *
+* * * *
+*
+* *
+* * *
+* * * *
+
+Sample Input 2:
+
+5
+
+Sample Output 2:
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+
+Solution:
+
+n=int(input())
+"""
+for i in range(1,n+1):
+    print("* "*i)
+for i in range(1,n+1):
+    print("* "*i)
+"""
+count=1 
+count1=1
+while count<=n:
+    print("* "*count)
+    count+=1
+while count1<=n:
+    print("* "*count1)
+    count1+=1
+
+______________________________________________________________________________________________________
+
+05. Product of N Numbers after X
+
+﻿Write a program that reads two numbers X and N, and prints the product of N numbers after X.
+
+Input:
+
+The first line of input contains an integer representing X. 
+The second line of input contains an integer representing N
+
+﻿Output:
+
+The output should be a single line containing an integer obtained by multiplying the N numbers after X.
+
+Explanation
+
+For example, if the given numbers are X = 4 and N = 2,
+• The 2 numbers after  4 are 5 and 6
+• The product of next 2 numbers from 4 is (5 * 6 = 30)
+
+The output should be 30.
+
+Sample Input 1:
+
+4
+2
+
+Sample Output 1:
+
+30
+
+Sample Input 2:
+
+10
+5
+
+Sample Output 2:
+
+360360
+
+Solution:
+
+m=int(input())
+n=int(input())
+p=1
+"""
+for i in range(m+1,m+n+1):
+    p*=i
+"""
+count=m+1
+while count<m+n+1:
+    p*=count
+    count+=1
+print(p)
+    
+__________________________________________________________________________________________
+
+06. Sum of N Squares
+
+Write a program that reads a number N and prints the sum of the squares of N numbers starting from 1.
+
+Input:
+
+The input will be a single line containing a positive integer (N).
+
+Output:
+
+The output should be a single line containing an ineteger that is the sum of sqaures of N numbers starting from 1.
+
+Explanation:
+
+For example, if the given number is N = 4,
+the 4 numbers starting from 1 are 1,2,3 and 4
+the square of the numbers are 1, 4, 9 and 16
+the sum of squares is (1 + 4 + 9 + 16 = 30). 
+So the output should be 30.
+
+For example, if the given number is 3, the sum of the squares of the  first 3 natural numbers,
+which is (1 + 4 + 9). 
+So the output should be 14.
+
+Sample Input 1:
+
+4
+
+Sample Output 1:
+
+30
+
+Sample Input 2:
+
+7
+
+Sample Output 2:
+
+140
+
+Solution:
+
+n=int(input())
+sum=0
+"""
+for i in range(1,n+1):
+    sum+=(i*i)
+"""
+count=1 
+while count<=n:
+    sum+=count*count
+    count+=1
+print(sum)
+
+__________________________________________________________________________________________________________
+
+07. Print Integers - 3
+
+﻿
+You are given an integer N as input. Write a program to print integers from N to 1.
+
+Input:
+
+The first line of input is an integer N
+
+Explanation:
+
+In the given example, N = 5 the integers from 5 to 1 are 5, 4, 3, 2,1
+Therefore, the output should be
+
+5
+4
+3
+2
+1
+
+Sample Input 1:
+
+5
+
+Sample Output 1:
+
+5
+4
+3
+2
+1
+
+Sample Input 2:
+
+3
+
+Sample Output 2:
+
+3
+2
+1
+
+Solution:
+
+n=int(input())
+count=0
+while(n>count):
+    print(n)
+    n=n-1
+
+___________________________________________________________________________________________________________

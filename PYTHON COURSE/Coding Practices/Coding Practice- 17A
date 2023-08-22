@@ -1,0 +1,429 @@
+01. Print Unicode Values
+
+Given a string S, write a program to print the Unicode values of all the characters in S, each on a new line.
+
+Input
+The input will be a single line containing a string representing S.
+
+Output
+The output should contain integers that are the Unicode values of all the characters in the string, each on a new line.
+
+Explanation:
+
+For example, if the given string is S = "code"
+• The characters in the string code are c, o, d, and e.
+• The Unicode values of above characters are,
+
+Character   Unicode Values
+
+c              99
+o              111
+d              100
+e              101
+
+The output should be,
+
+99
+111
+100
+101
+
+Sample Input 1:
+
+code
+
+Sample Output 1:
+
+99
+111
+100
+101
+
+Sample Input 2:
+
+India
+
+Sample Output 2:
+
+73
+110
+100
+105
+97
+
+Solution:
+
+string  = input()
+
+for each_character in string:
+    print(ord(each_character))
+
+________________________________________________________________________________________________________________________________________________________________________
+
+02. Count of Characters
+
+
+Given a string S and a number N, write a program to print the count of characters in S whose Unicode value is equal to the given number N.
+
+Input
+The first line of input contains a string representing S.
+The second line of input contains an integer representing N .
+
+Output
+The output should contain the count of characters in the string S whose Unicode value is equal to the given number N.
+
+Explanation
+
+For example, if the given string is S = "Google" and the given number is N = 111
+• The characters in the string Google are G, o, o, g, I and e.
+• The Unicode values of the above characters are,
+
+Character   Unicode Values
+
+G              71
+O              111
+O              111
+g              103
+l              108
+e              101
+
+• There are 2 characters o and O with the same unicode value 111.
+The output should be 2.
+
+Sample Input 1:
+
+Google
+111
+
+Sample Output 1:
+
+2
+
+Sample Input 2:
+
+code-editor
+101
+
+Sample Output 2:
+
+2
+
+Solution:
+
+string = input()
+number = int(input())
+
+count = 0
+
+for each_character in string:
+    if ord(each_character) == number:
+        count = count + 1
+
+print(count)
+
+________________________________________________________________________________________________________________________________________________________________________
+
+03. Print Smallest Letter
+
+Given a string S, write a program to print the character with the smallest Unicode value in the string S.
+
+Input
+The input will be a single line containing a string representing S .
+
+Output
+The output should be a single line containing a string representing the character with the smallest Unicode value in the string S
+
+Explanation
+
+For example, if the given string is S = "edit"
+• The characters in the string edit are e, d, i and t.
+• The Unicode values of the above characters are,
+
+Character   Unicode Values
+
+e              101
+d              100
+i              105
+t              116
+
+• The smallest Unicode value among the characters of the string edit is 100 100 101 <105 < 116 ) and the corresponding character is d.
+The output should be d.
+
+Sample Input 1:
+
+edit
+
+Sample Output 1:
+
+d
+
+Sample Input 2:
+
+baking
+
+Sample Output 2:
+
+a
+
+Solution:
+
+string = input()
+
+smallest_character  = string[0]
+
+for index in range(1, len(string)):
+    if ord(string[index]) < ord(smallest_character):
+        smallest_character = string[index]
+        
+print(smallest_character)
+
+________________________________________________________________________________________________________________________________________________________________________
+
+04. Unicode Value of First Uppercase Letter
+
+Given a string S, write a program to print the Unicode value of the first uppercase character in the string S.
+
+Input
+The input will be a single line containing a string representing S.
+
+Output
+The output should be a single line containing an integer that is the Unicode value of the first uppercase character in the given string S
+
+Explanation
+
+For example, if the given string is S = "proGrammer"
+• The characters in the string proGrammeR are p, r, o, G, r, a, m, m, e, r and R.
+• The uppercase characters in the string proGrammeR are G and R.
+• The first uppercase character in the string proGrammer is G.
+• The Unicode value of G is 71
+The output should be 71.
+
+Sample Input 1:
+
+proGrammeR
+
+Sample Output 1:
+
+71
+
+Sample Input 2:
+
+CoDing
+
+Sample Output 2:
+
+67
+
+Solution:
+
+string = input()
+
+for each_character in string:
+    if each_character == each_character.upper():
+        print(ord(each_character))
+        break
+
+________________________________________________________________________________________________________________________________________________________________________
+
+05. Print Characters - 2
+
+Given two Unicode values M and N, write a program to print characters with Unicode values from M to N each on a new line.
+
+Input
+The first line of input contains an integer representing M.
+The second line of input contains an integer representing N
+
+Output
+The output should contain all the characters with Unicode values from M to N, each on a new line.
+
+Explanation:
+
+For example, if the given numbers are M = 65 and N = 70,
+• The Unicode values from 65 to 70 are 65, 66, 67, 68, 69, and 70.
+• The characters with the above Unicode values are,
+
+Unicode Values    Character 
+
+    65                A
+    66                B
+    67                C
+    68                D
+    69                E 
+    70                F
+
+The output should be
+
+A
+B
+C
+D
+E
+F
+
+Sample Input 1:
+
+65
+70
+
+Sample Output 1:
+
+A
+B
+C
+D
+E
+F
+
+Sample Input 2:
+
+98
+115
+
+Sample Output 2:
+
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+
+Solution:
+
+m = int(input())
+n = int(input())
+
+for unicode_value in range(m, n + 1):
+    print(chr(unicode_value))
+
+________________________________________________________________________________________________________________________________________________________________________
+
+06. Print Characters - 3
+
+Given a number N, write a program that reads N Unicode values and prints a string by joining the characters of given N Unicode values.
+
+Input
+The first line of input contains an integer representing N.
+The next N lines of input contain integers.
+
+Output
+The output should be a single line containing a string obtained by joining the characters of given N Unicode values.
+
+Explanation:
+
+For example, if the given number N = 3
+Given 3 Unicode values are,
+
+67
+97
+114
+
+• The characters with the above Unicode values are,
+
+Unicode Values    Character 
+
+    67                C
+    97                a
+    114               r 
+
+• After joining the characters of the Unicode values 67 ( C ), 97( a ) and 114( r ) is Car
+
+The output should be Car.
+
+Sample Input 1:
+
+3
+67
+97
+114
+
+Sample Output 1:
+
+Car
+
+Sample Input 2:
+
+5
+73
+110
+100
+105
+97
+
+Sample Output 2:
+
+India
+
+Solution:
+
+number = int(input())
+string = ""
+
+for i in range(number):
+    unicode_value = int(input())
+    each_character = chr(unicode_value)
+    string = string + each_character
+    
+print(string)
+
+________________________________________________________________________________________________________________________________________________________________________
+
+07. Identify the Mistake - Shape
+
+Given the number of rows N, write a program to print the pattern similar to the pattern shown below.
+
+    $$$$$
+   $$$$$
+  $$$$$
+ $$$$$
+$$$$$
+
+Input
+The input will be a single line containing a positive integer (N).
+
+Ouput
+The output should be N rows containing the dollar($) character in the given pattern.
+
+Explanation
+
+For example, if the given number is 5, the pattern should contain 5 rows as shown below.
+
+    $$$$$
+   $$$$$
+  $$$$$
+ $$$$$
+$$$$$
+
+Sample Input:
+
+5
+
+Sample Output:
+
+    $$$$$
+   $$$$$
+  $$$$$
+ $$$$$
+$$$$$
+
+Solution:
+
+n = int(input())
+for i in range(0, n):
+    row_out = " " * (n-i-1)
+    row_out = row_out + "$" * n
+    print(row_out)
+
+________________________________________________________________________________________________________________________________________________________________________

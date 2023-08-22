@@ -1,0 +1,166 @@
+Aman loves solving matrix problems. In one problem, he was given a MX N matrix and instructed to:
+
+• Identify the zeros and replace them with the sum of neighbouring elements (top, bottom, left and right elements).
+
+• Once all the zeroes are replaced, all the other elements in the corresponding row and column of those 
+identified zeroes should be set to zero (excluding the elements which were previously zeros).
+
+Aman got stuck with this problem and your task is to help Aman solve this matrix problem.
+
+Write a program that reads the M x N matrix and prints the final matrix by following the above instructions.
+
+Input
+The first line of input contains two space-separated integers representing M and N respectively.
+The next M lines of input contain N space-separated integers representing the matrix.
+
+Output
+The output should be M lines containing N space-separated integers representing the final MX N matrix 
+by following the above instructions.
+
+Explanation
+Test Case: 1 If the given M = 3 and N = 3, the matrix is as follows:
+1 4 3
+5 Ө 2
+2 2 8
+
+The position of 0 is (1, 1). Replace (1, 1) with the sum of neighbouring elements.
+
+Positions         Neighbour Elements        Sum
+(1, 1)              4+2+5+2                  13
+
+All the other elements in the corresponding row and column of the identified zero should be set to 0 
+(excluding the element which is previously zero). 
+
+The output should be,
+
+1 0 3
+0 13 0
+2 0 8
+
+Test Case: 2 If the given M = 4 and N = 3, the matrix is as follows:
+0 1 2
+2 1 0
+0 2 3
+1 0 1
+
+The position of 0 is (0, 0), (1, 2), (2,0),(3,1) replace with the sum of neighbouring elements.
+
+Positions         Neighbour Elements        Sum
+(0, 0)                1+2                    3
+(1, 2)                2+1+3                  6
+(2, 0)                2+2+1                  5
+(3, 1)                2+1+1                  4
+
+All the other elements in the corresponding row and column of the identified zero should be set to 0 
+(excluding the element which is previously zero). 
+
+The output should be,
+
+3 0 0
+0 0 6
+5 0 0
+0 4 0
+
+Sample Input1:
+3 3
+1 4 3
+5 0 2
+2 2 8
+Sample Output1:
+1 0 3
+0 13 0
+2 0 8
+
+Sample Input2
+4 3
+0 1 2
+2 1 0
+0 2 3
+1 0 1
+Sample Output2
+3 0 0
+0 0 6
+5 0 0
+0 4 0
+
+Solution
+
+def read_matrix(rows):
+    matrix = []
+    for i in range(rows):
+        row = list(map(int, input().split()))
+        matrix.append(row)
+    return matrix
+def create_matrix_copy(matrix):
+    temp_matrix = []
+    for row in matrix:
+        temp_matrix.append(row.copy())
+    return temp_matrix
+def set_row(temp_matrix, i):
+    for column_index in range(len(temp_matrix[0])):
+        temp_matrix[i][column_index] = 0
+
+def set_column(temp_matrix, j):
+    for row_index in range(len(temp_matrix)):
+        temp_matrix[row_index][j] = 0
+def sum_of_neighbours(matrix, i, j):
+    matrix_length = len(matrix)
+    matrix_row_length = len(matrix[0])
+    neighbour_sum = 0
+    if (i - 1 >= 0):
+        neighbour_sum += matrix[i - 1][j]
+    if (i + 1 < matrix_length):
+        neighbour_sum += matrix[i + 1][j]
+    if (j - 1 >= 0):
+        neighbour_sum += matrix[i][j - 1]
+    if (j + 1 < matrix_row_length):
+        neighbour_sum += matrix[i][j + 1]
+    return neighbour_sum
+def replacing_zeros(matrix, temp_matrix, rows, columns):
+    neighbour_sum_dict = dict()
+    for i in range(rows):
+        for j in range(columns):
+            if (matrix[i][j] == 0):
+                set_row(temp_matrix, i)
+                set_column(temp_matrix, j)
+                neighbour_sum_dict[(i, j)] = sum_of_neighbours(matrix, i, j)
+    for each_set in neighbour_sum_dict:
+        temp_matrix[each_set[0]][each_set[1]] = neighbour_sum_dict[each_set]
+    return temp_matrix
+def print_matrix(modified_matrix, rows, columns):
+    for i in range(rows):
+        row = ""
+        for j in range(columns):
+            row += str(modified_matrix[i][j]) + " "
+        print(row)
+def main():
+    rows, columns = map(int, input().split())
+    matrix = read_matrix(rows)
+    temp_matrix = create_matrix_copy(matrix)
+    modified_matrix = replacing_zeros(matrix, temp_matrix, rows, columns) 
+    print_matrix(modified_matrix, rows, columns)
+
+main()
+
+_______________________________________________________
+Another Method
+_______________________________________________________
+
+m,n=list(map(int,input().split()))
+mat=[]
+for i in range(m):
+    s=list(map(int,input().split()))
+    mat.append(s)
+matrix=[mat[i][:] for i in range(m)]
+for i in range(m):
+    for j in range(n):
+        if not mat[i][j]:
+            matrix[i]=[0]*n 
+            for k in range(m):
+                matrix[k][j]=0
+for i in range(m):
+    for j in range(n):
+        if not mat[i][j]:
+            matrix[i][j]=mat[i][max(j-1,0)]+mat[i][min(j+1,n-1)]+mat[max(i-1,0)][j]+mat[min(i+1,m-1)][j]
+for i in range(m):
+    print(*matrix[i])
